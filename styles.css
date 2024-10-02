@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* Primary */
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+
+    /* Accent */
+
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+
+    /* Neutral */
+
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+    --Raleway: "Raleway", sans-serif;
+    --Open-Sans: "Open Sans", sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: clamp(14px, 2vw, 16px);
+}
+body {
+    color: var(--Very-Dark-Blue);
+    font-family: var(--Raleway);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: url(images/bg-curve-mobile.svg) no-repeat;
+    background-size: contain;
+    background-position: 0 50rem;
+    font-size: .9rem;
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+}
+ul {
+    display: flex;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+nav li a{
+    display: block;
+    padding: .5rem;
+    color: var(--Very-Dark-Blue);
+    font-size: .9rem;
+}
+nav li a:hover{
+    background-color: var(--Desaturated-Blue);
+}
+.logo img {
+    width: 70%;
+}
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+    text-align: center;
+    flex-direction: column-reverse;
+}
+.content:first-of-type{
+    margin-top: 7rem;
+}
+.content:nth-of-type(2){
+   background-color: var(--Light-Grayish-Blue);
+   padding: 1rem;
+}
+.content1 h2{
+    font-size: clamp(25px, 5vw, 50px);
+    margin-bottom: 1rem;
+}
+.content1 {
+    font-size: 1.125rem;
+}
+form {
+    margin-top: 1rem;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: minmax(0, 1fr);
+}
+form input[type="email"]{
+    padding: .5rem;
+    color: var(--Light-Gray);
+    border: 2px solid var(--Light-Gray);
+}
+form button {
+    padding: .5rem;
+    background-color: var(--Bright-Blue);
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+.content2 img{
+    width: 100%;
+}
+.files-header {
+    font-size: 1.4rem;
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.text {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--Desaturated-Blue);
+}
+.how-iy-works{
+    color: var(--Moderate-Cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    margin: 3rem 0;
+} 
+.how-iy-works img{
+    transition: transform .3s ease-in;
+}
+.how-iy-works:hover img {
+    transform: translateX(5px);
+}
+.testimonies{
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: left;
+    margin: 0 auto 2rem auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.testimonies img{
+    width: 5%;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.profile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.profile-details {
+    font-size: .8rem;
+}
+.profile-details .name{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--Open-Sans);
+}
+.get-access{
+    background-color: var(--Desaturated-Blue);
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    margin-top: -2rem;
+    color: white;
+    text-align: center;
+}
+.access-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.get-access form {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+footer{
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    flex-direction: column;
+    padding: 8%; 
+    gap: 2rem;
+    color: white;
+}
+footer .logo-svg{
+    width: 30%;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: .9rem;
+}
+.phone, .email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact a {
+    color: white;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.facebook, .twitter, .instagram {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 15px;
+    position: relative;
+}
+.facebook i, .twitter i, .instagram i {
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+}
+@media (min-width: 750px) {
+    .content{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .content1 form {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+    content{
+        padding: 0;
+        margin: 0;
+    }
+    main .content, .content:nth-of-type(2) {
+        padding: 8% 11%;
+    }
+    .testimonies {
+        margin: 0;
+    }
+    .get-access {
+        flex-direction: row;
+        text-align: left;
+        gap: 10rem;
+    }
+    .get-access .access-text {
+        width: 40%;
+    }
+    .get-access form{
+        width: 60%;
+        margin-left: 0;
+    }
+    .get-access form input[type="email"] {
+        width: 100%;
+    }
+    .get-access form button {
+        width: 100%;
+        max-width: 170px;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .connect {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .socials {
+        height: 10%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
